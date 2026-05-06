@@ -43,6 +43,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 16px;
     }
 
     .nav-name {
@@ -50,11 +51,18 @@
       font-weight: 600;
       color: var(--text);
       letter-spacing: 0.2px;
+      flex-shrink: 0;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 32px;
     }
 
     .nav-links {
       display: flex;
-      gap: 32px;
+      gap: 28px;
       list-style: none;
     }
 
@@ -67,6 +75,36 @@
     .nav-links a:hover {
       color: var(--text);
       text-decoration: none;
+    }
+
+    .lang-switcher {
+      display: flex;
+      gap: 4px;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: inherit;
+      letter-spacing: 0.5px;
+      transition: all 0.15s;
+    }
+
+    .lang-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .lang-btn:hover:not(.active) {
+      border-color: var(--accent2);
+      color: var(--accent2);
     }
 
     /* SECTIONS */
@@ -88,9 +126,7 @@
     }
 
     /* HERO */
-    #inicio {
-      text-align: center;
-    }
+    #inicio { text-align: center; }
 
     .hero h1 {
       font-size: 56px;
@@ -139,6 +175,7 @@
       justify-content: center;
     }
 
+    /* SOCIAL BUTTONS */
     .social-btn {
       display: inline-flex;
       align-items: center;
@@ -185,9 +222,7 @@
       transition: border-color 0.2s;
     }
 
-    .stack-card:hover {
-      border-color: rgba(234, 88, 12, 0.4);
-    }
+    .stack-card:hover { border-color: rgba(234, 88, 12, 0.4); }
 
     .stack-card h3 {
       font-size: 11px;
@@ -198,11 +233,7 @@
       margin-bottom: 14px;
     }
 
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
 
     .tag {
       background: var(--surface2);
@@ -242,18 +273,9 @@
       gap: 12px;
     }
 
-    .project-card h3 {
-      font-size: 16px;
-      font-weight: 600;
-      line-height: 1.3;
-    }
+    .project-card h3 { font-size: 16px; font-weight: 600; line-height: 1.3; }
 
-    .project-link {
-      font-size: 12px;
-      color: var(--accent2);
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
+    .project-link { font-size: 12px; color: var(--accent2); white-space: nowrap; flex-shrink: 0; }
 
     .project-private {
       font-size: 11px;
@@ -263,11 +285,7 @@
       border-radius: 4px;
     }
 
-    .project-card p {
-      font-size: 14px;
-      color: var(--text-muted);
-      line-height: 1.65;
-    }
+    .project-card p { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
 
     .project-result {
       background: rgba(234, 88, 12, 0.07);
@@ -280,10 +298,7 @@
     }
 
     /* EXPERIENCE */
-    .exp-list {
-      display: flex;
-      flex-direction: column;
-    }
+    .exp-list { display: flex; flex-direction: column; }
 
     .exp-item {
       display: grid;
@@ -297,12 +312,7 @@
 
     .exp-meta { padding-top: 2px; }
 
-    .exp-period {
-      font-size: 12px;
-      color: var(--text-muted);
-      margin-bottom: 4px;
-      display: block;
-    }
+    .exp-period { font-size: 12px; color: var(--text-muted); margin-bottom: 4px; display: block; }
 
     .exp-sector {
       font-size: 11px;
@@ -312,24 +322,11 @@
       letter-spacing: 0.8px;
     }
 
-    .exp-content h3 {
-      font-size: 15px;
-      font-weight: 600;
-      margin-bottom: 3px;
-    }
+    .exp-content h3 { font-size: 15px; font-weight: 600; margin-bottom: 3px; }
 
-    .exp-role {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-bottom: 14px;
-    }
+    .exp-role { font-size: 13px; color: var(--text-muted); margin-bottom: 14px; }
 
-    .exp-list-items {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
+    .exp-list-items { list-style: none; display: flex; flex-direction: column; gap: 8px; }
 
     .exp-list-items li {
       font-size: 13px;
@@ -348,10 +345,7 @@
       top: 2px;
     }
 
-    .exp-list-items li strong {
-      color: var(--text);
-      font-weight: 500;
-    }
+    .exp-list-items li strong { color: var(--text); font-weight: 500; }
 
     /* EDUCATION */
     .edu-grid {
@@ -368,9 +362,7 @@
       transition: border-color 0.2s;
     }
 
-    .edu-card:hover {
-      border-color: rgba(234, 88, 12, 0.4);
-    }
+    .edu-card:hover { border-color: rgba(234, 88, 12, 0.4); }
 
     .edu-type {
       font-size: 11px;
@@ -381,24 +373,12 @@
       margin-bottom: 8px;
     }
 
-    .edu-card h3 {
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 4px;
-      line-height: 1.4;
-    }
+    .edu-card h3 { font-size: 14px; font-weight: 600; margin-bottom: 4px; line-height: 1.4; }
 
-    .edu-card p {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
+    .edu-card p { font-size: 12px; color: var(--text-muted); }
 
     /* CONTACT */
-    .contact-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
+    .contact-grid { display: flex; flex-wrap: wrap; gap: 12px; }
 
     /* FOOTER */
     footer {
@@ -410,7 +390,7 @@
     }
 
     /* RESPONSIVE */
-    @media (max-width: 640px) {
+    @media (max-width: 768px) {
       nav { padding: 14px 20px; }
       .nav-links { display: none; }
       .hero h1 { font-size: 38px; }
@@ -426,13 +406,19 @@
 
 <nav>
   <span class="nav-name">George Fernandes</span>
-  <ul class="nav-links">
-    <li><a href="#stack">Stack</a></li>
-    <li><a href="#projetos">Projetos</a></li>
-    <li><a href="#experiencia">Experiência</a></li>
-    <li><a href="#formacao">Formação</a></li>
-    <li><a href="#contato">Contato</a></li>
-  </ul>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#stack"      data-i18n="nav.stack">Stack</a></li>
+      <li><a href="#projetos"   data-i18n="nav.projects">Projetos</a></li>
+      <li><a href="#experiencia" data-i18n="nav.experience">Experiência</a></li>
+      <li><a href="#formacao"   data-i18n="nav.education">Formação</a></li>
+      <li><a href="#contato"    data-i18n="nav.contact">Contato</a></li>
+    </ul>
+    <div class="lang-switcher">
+      <button class="lang-btn active" id="btn-pt" onclick="setLanguage('pt')">PT</button>
+      <button class="lang-btn"        id="btn-en" onclick="setLanguage('en')">EN</button>
+    </div>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -441,7 +427,7 @@
   <div class="hero-typewriter">
     <span id="typewriter-text"></span><span class="typewriter-cursor"></span>
   </div>
-  <p class="hero-desc">
+  <p class="hero-desc" data-i18n="hero.desc">
     Atuo na interseção entre engenharia de dados e inteligência artificial, construindo
     pipelines e sistemas multi-agent que transformam dados em decisões. Mais de 5 anos
     de experiência em setores de alta complexidade: Saúde Corporativa, Logística,
@@ -473,56 +459,42 @@
 
 <!-- STACK -->
 <section id="stack">
-  <div class="section-label">Stack Técnica</div>
+  <div class="section-label" data-i18n="section.stack">Stack Técnica</div>
   <div class="stack-grid">
     <div class="stack-card">
-      <h3>AI Engineering</h3>
+      <h3 data-i18n="stack.ai">AI Engineering</h3>
       <div class="tags">
-        <span class="tag">LangChain</span>
-        <span class="tag">LangGraph</span>
-        <span class="tag">CrewAI</span>
-        <span class="tag">LlamaIndex</span>
-        <span class="tag">RAG</span>
-        <span class="tag">Embeddings</span>
-        <span class="tag">Qdrant</span>
-        <span class="tag">LangFuse</span>
-        <span class="tag">Claude</span>
-        <span class="tag">Multi-Agent</span>
+        <span class="tag">LangChain</span><span class="tag">LangGraph</span>
+        <span class="tag">CrewAI</span><span class="tag">LlamaIndex</span>
+        <span class="tag">RAG</span><span class="tag">Embeddings</span>
+        <span class="tag">Qdrant</span><span class="tag">LangFuse</span>
+        <span class="tag">Claude</span><span class="tag">Multi-Agent</span>
       </div>
     </div>
     <div class="stack-card">
-      <h3>Engenharia de Dados</h3>
+      <h3 data-i18n="stack.data">Engenharia de Dados</h3>
       <div class="tags">
-        <span class="tag">Python</span>
-        <span class="tag">SQL</span>
-        <span class="tag">R</span>
-        <span class="tag">ETL / ELT</span>
-        <span class="tag">Pipelines</span>
-        <span class="tag">Data Warehouse</span>
-        <span class="tag">Azure</span>
-        <span class="tag">Docker</span>
+        <span class="tag">Python</span><span class="tag">SQL</span>
+        <span class="tag">R</span><span class="tag">ETL / ELT</span>
+        <span class="tag">Pipelines</span><span class="tag">Data Warehouse</span>
+        <span class="tag">Azure</span><span class="tag">Docker</span>
         <span class="tag">PostgreSQL</span>
       </div>
     </div>
     <div class="stack-card">
-      <h3>BI e Visualização</h3>
+      <h3 data-i18n="stack.bi">BI e Visualização</h3>
       <div class="tags">
-        <span class="tag">Power BI</span>
-        <span class="tag">Looker Studio</span>
-        <span class="tag">DAX</span>
-        <span class="tag">Power Query</span>
+        <span class="tag">Power BI</span><span class="tag">Looker Studio</span>
+        <span class="tag">DAX</span><span class="tag">Power Query</span>
         <span class="tag">Excel Avançado</span>
       </div>
     </div>
     <div class="stack-card">
-      <h3>Sistemas e Integração</h3>
+      <h3 data-i18n="stack.systems">Sistemas e Integração</h3>
       <div class="tags">
-        <span class="tag">SAP</span>
-        <span class="tag">TOTVS</span>
-        <span class="tag">SQL Server</span>
-        <span class="tag">MySQL</span>
-        <span class="tag">ERP</span>
-        <span class="tag">CRM / WMS</span>
+        <span class="tag">SAP</span><span class="tag">TOTVS</span>
+        <span class="tag">SQL Server</span><span class="tag">MySQL</span>
+        <span class="tag">ERP</span><span class="tag">CRM / WMS</span>
       </div>
     </div>
   </div>
@@ -530,51 +502,45 @@
 
 <!-- PROJECTS -->
 <section id="projetos">
-  <div class="section-label">Projetos</div>
+  <div class="section-label" data-i18n="section.projects">Projetos</div>
   <div class="projects-grid">
 
     <div class="project-card">
       <div class="project-top">
-        <h3>B2B Audience Segmentation</h3>
+        <h3 data-i18n="proj.b2b.title">B2B Audience Segmentation</h3>
         <a href="https://github.com/gluizfernandes/b2b-audience-segmentation" target="_blank" class="project-link">↗ GitHub</a>
       </div>
-      <p>
+      <p data-i18n="proj.b2b.desc">
         Pipeline de segmentação comportamental de audiências B2B para mídia paga.
         Identifica automaticamente 3 perfis de conta corporativa e recomenda estratégias
         de mídia por segmento, eliminando desperdício de budget causado por tratamento
         uniforme de padrões comportamentais distintos.
       </p>
-      <div class="project-result">
+      <div class="project-result" data-i18n="proj.b2b.result">
         Cluster de alto desempenho identificado: ~18,6% CTR com R$38 CPC via K-Means (Silhouette Score 0,32)
       </div>
       <div class="tags">
-        <span class="tag">Python</span>
-        <span class="tag">scikit-learn</span>
-        <span class="tag">K-Means</span>
-        <span class="tag">pandas</span>
-        <span class="tag">matplotlib</span>
-        <span class="tag">joblib</span>
+        <span class="tag">Python</span><span class="tag">scikit-learn</span>
+        <span class="tag">K-Means</span><span class="tag">pandas</span>
+        <span class="tag">matplotlib</span><span class="tag">joblib</span>
       </div>
     </div>
 
     <div class="project-card">
       <div class="project-top">
-        <h3>Career Mentor Agent</h3>
-        <span class="project-private">privado</span>
+        <h3 data-i18n="proj.mentor.title">Career Mentor Agent</h3>
+        <span class="project-private" data-i18n="proj.private">privado</span>
       </div>
-      <p>
+      <p data-i18n="proj.mentor.desc">
         Agente de mentoria de carreira para profissionais de dados. Analisa CVs via RAG
         sobre conteúdo especializado, identifica gaps de posicionamento e gera
         recomendações estratégicas para LinkedIn e candidaturas. Construído com arquitetura
         multi-agent e interface conversacional.
       </p>
       <div class="tags">
-        <span class="tag">LangGraph</span>
-        <span class="tag">Claude</span>
-        <span class="tag">Qdrant</span>
-        <span class="tag">Chainlit</span>
-        <span class="tag">RAG</span>
-        <span class="tag">Docker</span>
+        <span class="tag">LangGraph</span><span class="tag">Claude</span>
+        <span class="tag">Qdrant</span><span class="tag">Chainlit</span>
+        <span class="tag">RAG</span><span class="tag">Docker</span>
       </div>
     </div>
 
@@ -583,22 +549,22 @@
 
 <!-- EXPERIENCE -->
 <section id="experiencia">
-  <div class="section-label">Experiência</div>
+  <div class="section-label" data-i18n="section.experience">Experiência</div>
   <div class="exp-list">
 
     <div class="exp-item">
       <div class="exp-meta">
         <span class="exp-period">01/2023 — 04/2026</span>
-        <span class="exp-sector">Health Tech</span>
+        <span class="exp-sector" data-i18n="exp.hb.sector">Health Tech</span>
       </div>
       <div class="exp-content">
         <h3>HealthBit Performasys</h3>
-        <div class="exp-role">Engenheiro de Dados</div>
+        <div class="exp-role" data-i18n="exp.hb.role">Engenheiro de Dados</div>
         <ul class="exp-list-items">
-          <li><strong>Pipelines ETL/ELT</strong> em Python e R para os 5 programas da plataforma (Gestante, Crônicos, Saúde Mental, Telemedicina, PAE), atendendo ~12 clientes líderes de mercado</li>
-          <li><strong>Data products</strong> por programa com entrega padronizada em Power BI para diretoria e clientes, incluindo indicadores PHQ-9 e controle de slots de Telemedicina</li>
-          <li><strong>AI-Driven Analytics:</strong> lógica orientada por dados conectando indicadores da camada de consumo a ações estratégicas dos clientes</li>
-          <li><strong>Data lineage e integridade:</strong> monitoramento de qualidade e distribuição horizontal de relatórios para diretoria e gestores executivos</li>
+          <li data-i18n-html="exp.hb.li1"><strong>Pipelines ETL/ELT</strong> em Python e R para os 5 programas da plataforma (Gestante, Crônicos, Saúde Mental, Telemedicina, PAE), atendendo ~12 clientes líderes de mercado</li>
+          <li data-i18n-html="exp.hb.li2"><strong>Data products</strong> por programa com entrega padronizada em Power BI para diretoria e clientes, incluindo indicadores PHQ-9 e controle de slots de Telemedicina</li>
+          <li data-i18n-html="exp.hb.li3"><strong>AI-Driven Analytics:</strong> lógica orientada por dados conectando indicadores da camada de consumo a ações estratégicas dos clientes</li>
+          <li data-i18n-html="exp.hb.li4"><strong>Data lineage e integridade:</strong> monitoramento de qualidade e distribuição horizontal de relatórios para diretoria e gestores executivos</li>
         </ul>
       </div>
     </div>
@@ -606,15 +572,15 @@
     <div class="exp-item">
       <div class="exp-meta">
         <span class="exp-period">08/2022 — 01/2023</span>
-        <span class="exp-sector">Consultoria de BI</span>
+        <span class="exp-sector" data-i18n="exp.dg.sector">Consultoria de BI</span>
       </div>
       <div class="exp-content">
         <h3>DG Sistemas Inteligentes</h3>
-        <div class="exp-role">Consultor de Business Intelligence e Dados</div>
+        <div class="exp-role" data-i18n="exp.dg.role">Consultor de Business Intelligence e Dados</div>
         <ul class="exp-list-items">
-          <li><strong>Data Marts</strong> com modelagem dimensional conectados a ERP, CRM e planilhas para clientes de Varejo, Industrial e Alimentício</li>
-          <li><strong>Dashboards near real-time</strong> em SQL e Power BI para monitoramento de KPIs e produtividade da força de vendas</li>
-          <li><strong>Otimização SQL</strong> para extração e distribuição de dados em áreas de prospecção e aquisição comercial</li>
+          <li data-i18n-html="exp.dg.li1"><strong>Data Marts</strong> com modelagem dimensional conectados a ERP, CRM e planilhas para clientes de Varejo, Industrial e Alimentício</li>
+          <li data-i18n-html="exp.dg.li2"><strong>Dashboards near real-time</strong> em SQL e Power BI para monitoramento de KPIs e produtividade da força de vendas</li>
+          <li data-i18n-html="exp.dg.li3"><strong>Otimização SQL</strong> para extração e distribuição de dados em áreas de prospecção e aquisição comercial</li>
         </ul>
       </div>
     </div>
@@ -622,14 +588,14 @@
     <div class="exp-item">
       <div class="exp-meta">
         <span class="exp-period">02/2021 — 08/2022</span>
-        <span class="exp-sector">Logística · Oil & Gas</span>
+        <span class="exp-sector" data-i18n="exp.mr.sector">Logística · Oil & Gas</span>
       </div>
       <div class="exp-content">
         <h3>Grupo Mirassol</h3>
-        <div class="exp-role">Assistente Administrativo</div>
+        <div class="exp-role" data-i18n="exp.mr.role">Assistente Administrativo</div>
         <ul class="exp-list-items">
-          <li><strong>Plataforma de BI</strong> implementada do zero, substituindo relatórios manuais em Excel para toda a hierarquia da operação no hub ARM-RIO (Petrobras)</li>
-          <li><strong>SAP</strong> como source system de referência: extração, alimentação e integração com sistemas próprios para faturamento, metas operacionais e rastreabilidade de materiais</li>
+          <li data-i18n-html="exp.mr.li1"><strong>Plataforma de BI</strong> implementada do zero, substituindo relatórios manuais em Excel para toda a hierarquia da operação no hub ARM-RIO (Petrobras)</li>
+          <li data-i18n-html="exp.mr.li2"><strong>SAP</strong> como source system de referência: extração, alimentação e integração com sistemas próprios para faturamento, metas operacionais e rastreabilidade de materiais</li>
         </ul>
       </div>
     </div>
@@ -639,34 +605,34 @@
 
 <!-- EDUCATION -->
 <section id="formacao">
-  <div class="section-label">Formação e Certificações</div>
+  <div class="section-label" data-i18n="section.education">Formação e Certificações</div>
   <div class="edu-grid">
     <div class="edu-card">
-      <div class="edu-type">MBA</div>
-      <h3>Data Science e Analytics</h3>
-      <p>USP/Esalq · 2026</p>
+      <div class="edu-type" data-i18n="edu.mba.type">MBA</div>
+      <h3 data-i18n="edu.mba.title">Data Science e Analytics</h3>
+      <p data-i18n="edu.mba.org">USP/Esalq · 2026</p>
     </div>
     <div class="edu-card">
-      <div class="edu-type">Graduação</div>
-      <h3>Administração</h3>
-      <p>UNESA · 2024</p>
+      <div class="edu-type" data-i18n="edu.grad.type">Graduação</div>
+      <h3 data-i18n="edu.grad.title">Administração</h3>
+      <p data-i18n="edu.grad.org">UNESA · 2024</p>
     </div>
     <div class="edu-card">
-      <div class="edu-type">Certificação</div>
-      <h3>Formação AI Data Engineer</h3>
-      <p>AIDE · 2026</p>
+      <div class="edu-type" data-i18n="edu.cert1.type">Certificação</div>
+      <h3 data-i18n="edu.cert1.title">Formação AI Data Engineer</h3>
+      <p data-i18n="edu.cert1.org">AIDE · 2026</p>
     </div>
     <div class="edu-card">
-      <div class="edu-type">Certificação</div>
-      <h3>Engenharia de Dados com Azure</h3>
-      <p>Microsoft Azure</p>
+      <div class="edu-type" data-i18n="edu.cert2.type">Certificação</div>
+      <h3 data-i18n="edu.cert2.title">Engenharia de Dados com Azure</h3>
+      <p data-i18n="edu.cert2.org">Microsoft Azure</p>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contato">
-  <div class="section-label">Contato</div>
+  <div class="section-label" data-i18n="section.contact">Contato</div>
   <div class="contact-grid">
     <a href="https://linkedin.com/in/gluizfernandes" class="social-btn linkedin" target="_blank">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -686,59 +652,146 @@
     </a>
     <a href="mailto:ggluizfernandes@gmail.com" class="social-btn email">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-      ggluizfernandes@gmail.com
+      Email
     </a>
   </div>
 </section>
 
-<footer>
-  George Luiz Pereira Fernandes · Belford Roxo, RJ · 2026
-</footer>
+<footer>George Luiz Pereira Fernandes · Belford Roxo, RJ · 2026</footer>
 
 <script>
-  const roles = [
-    'AI Data Engineer',
-    'Multi-Agent Systems',
-    'RAG Pipelines',
-    'Data & AI Engineering',
-    'LangChain · CrewAI · LlamaIndex'
-  ];
+  const translations = {
+    pt: {
+      'nav.stack': 'Stack', 'nav.projects': 'Projetos', 'nav.experience': 'Experiência',
+      'nav.education': 'Formação', 'nav.contact': 'Contato',
+      'hero.desc': 'Atuo na interseção entre engenharia de dados e inteligência artificial, construindo pipelines e sistemas multi-agent que transformam dados em decisões. Mais de 5 anos de experiência em setores de alta complexidade: Saúde Corporativa, Logística, Oil & Gas e Varejo.',
+      'section.stack': 'Stack Técnica', 'section.projects': 'Projetos',
+      'section.experience': 'Experiência', 'section.education': 'Formação e Certificações',
+      'section.contact': 'Contato',
+      'stack.ai': 'AI Engineering', 'stack.data': 'Engenharia de Dados',
+      'stack.bi': 'BI e Visualização', 'stack.systems': 'Sistemas e Integração',
+      'proj.b2b.title': 'B2B Audience Segmentation',
+      'proj.b2b.desc': 'Pipeline de segmentação comportamental de audiências B2B para mídia paga. Identifica automaticamente 3 perfis de conta corporativa e recomenda estratégias de mídia por segmento, eliminando desperdício de budget causado por tratamento uniforme de padrões comportamentais distintos.',
+      'proj.b2b.result': 'Cluster de alto desempenho identificado: ~18,6% CTR com R$38 CPC via K-Means (Silhouette Score 0,32)',
+      'proj.mentor.title': 'Career Mentor Agent',
+      'proj.mentor.desc': 'Agente de mentoria de carreira para profissionais de dados. Analisa CVs via RAG sobre conteúdo especializado, identifica gaps de posicionamento e gera recomendações estratégicas para LinkedIn e candidaturas. Construído com arquitetura multi-agent e interface conversacional.',
+      'proj.private': 'privado',
+      'exp.hb.sector': 'Health Tech', 'exp.hb.role': 'Engenheiro de Dados',
+      'exp.hb.li1': '<strong>Pipelines ETL/ELT</strong> em Python e R para os 5 programas da plataforma (Gestante, Crônicos, Saúde Mental, Telemedicina, PAE), atendendo ~12 clientes líderes de mercado',
+      'exp.hb.li2': '<strong>Data products</strong> por programa com entrega padronizada em Power BI para diretoria e clientes, incluindo indicadores PHQ-9 e controle de slots de Telemedicina',
+      'exp.hb.li3': '<strong>AI-Driven Analytics:</strong> lógica orientada por dados conectando indicadores da camada de consumo a ações estratégicas dos clientes',
+      'exp.hb.li4': '<strong>Data lineage e integridade:</strong> monitoramento de qualidade e distribuição horizontal de relatórios para diretoria e gestores executivos',
+      'exp.dg.sector': 'Consultoria de BI', 'exp.dg.role': 'Consultor de Business Intelligence e Dados',
+      'exp.dg.li1': '<strong>Data Marts</strong> com modelagem dimensional conectados a ERP, CRM e planilhas para clientes de Varejo, Industrial e Alimentício',
+      'exp.dg.li2': '<strong>Dashboards near real-time</strong> em SQL e Power BI para monitoramento de KPIs e produtividade da força de vendas',
+      'exp.dg.li3': '<strong>Otimização SQL</strong> para extração e distribuição de dados em áreas de prospecção e aquisição comercial',
+      'exp.mr.sector': 'Logística · Oil & Gas', 'exp.mr.role': 'Assistente Administrativo',
+      'exp.mr.li1': '<strong>Plataforma de BI</strong> implementada do zero, substituindo relatórios manuais em Excel para toda a hierarquia da operação no hub ARM-RIO (Petrobras)',
+      'exp.mr.li2': '<strong>SAP</strong> como source system de referência: extração, alimentação e integração com sistemas próprios para faturamento, metas operacionais e rastreabilidade de materiais',
+      'edu.mba.type': 'MBA', 'edu.mba.title': 'Data Science e Analytics', 'edu.mba.org': 'USP/Esalq · 2026',
+      'edu.grad.type': 'Graduação', 'edu.grad.title': 'Administração', 'edu.grad.org': 'UNESA · 2024',
+      'edu.cert1.type': 'Certificação', 'edu.cert1.title': 'Formação AI Data Engineer', 'edu.cert1.org': 'AIDE · 2026',
+      'edu.cert2.type': 'Certificação', 'edu.cert2.title': 'Engenharia de Dados com Azure', 'edu.cert2.org': 'Microsoft Azure',
+      'roles': ['Engenheiro de Dados', 'AI Data Engineer', 'Multi-Agent Systems']
+    },
+    en: {
+      'nav.stack': 'Stack', 'nav.projects': 'Projects', 'nav.experience': 'Experience',
+      'nav.education': 'Education', 'nav.contact': 'Contact',
+      'hero.desc': 'I work at the intersection of data engineering and artificial intelligence, building pipelines and multi-agent systems that turn data into decisions. Over 5 years of experience in high-complexity sectors: Corporate Health, Logistics, Oil & Gas, and Retail.',
+      'section.stack': 'Tech Stack', 'section.projects': 'Projects',
+      'section.experience': 'Experience', 'section.education': 'Education & Certifications',
+      'section.contact': 'Contact',
+      'stack.ai': 'AI Engineering', 'stack.data': 'Data Engineering',
+      'stack.bi': 'BI & Visualization', 'stack.systems': 'Systems & Integration',
+      'proj.b2b.title': 'B2B Audience Segmentation',
+      'proj.b2b.desc': 'Behavioral segmentation pipeline for B2B audiences in paid media. Automatically identifies 3 corporate account profiles and recommends media strategies per segment, eliminating budget waste caused by uniform treatment of distinct behavioral patterns.',
+      'proj.b2b.result': 'High-performance cluster identified: ~18.6% CTR at R$38 CPC via K-Means (Silhouette Score 0.32)',
+      'proj.mentor.title': 'Career Mentor Agent',
+      'proj.mentor.desc': 'Career mentoring agent for data professionals. Analyzes CVs via RAG over specialized content, identifies positioning gaps, and generates strategic recommendations for LinkedIn and job applications. Built with multi-agent architecture and a conversational interface.',
+      'proj.private': 'private',
+      'exp.hb.sector': 'Health Tech', 'exp.hb.role': 'Data Engineer',
+      'exp.hb.li1': '<strong>ETL/ELT Pipelines</strong> in Python and R for the platform\'s 5 programs (Maternal, Chronic, Mental Health, Telemedicine, EAP), serving ~12 market-leading clients',
+      'exp.hb.li2': '<strong>Data products</strong> per program with standardized delivery in Power BI for management and clients, including PHQ-9 indicators and Telemedicine slot control',
+      'exp.hb.li3': '<strong>AI-Driven Analytics:</strong> data-oriented logic connecting consumption layer indicators to clients\' strategic actions',
+      'exp.hb.li4': '<strong>Data lineage & integrity:</strong> quality monitoring and horizontal report distribution to executives and senior managers',
+      'exp.dg.sector': 'BI Consulting', 'exp.dg.role': 'Business Intelligence Consultant',
+      'exp.dg.li1': '<strong>Data Marts</strong> with dimensional modeling connected to ERP, CRM, and spreadsheets for Retail, Industrial, and Food sector clients',
+      'exp.dg.li2': '<strong>Near real-time dashboards</strong> in SQL and Power BI for KPI monitoring and sales force productivity',
+      'exp.dg.li3': '<strong>SQL optimization</strong> for data extraction and distribution in prospecting and commercial acquisition areas',
+      'exp.mr.sector': 'Logistics · Oil & Gas', 'exp.mr.role': 'Administrative Assistant',
+      'exp.mr.li1': '<strong>BI platform</strong> built from scratch, replacing manual Excel reports across the entire operation hierarchy at the ARM-RIO hub (Petrobras)',
+      'exp.mr.li2': '<strong>SAP</strong> as reference source system: extraction, input, and integration with internal systems for billing, operational targets, and materials traceability',
+      'edu.mba.type': 'MBA', 'edu.mba.title': 'Data Science & Analytics', 'edu.mba.org': 'USP/Esalq · 2026',
+      'edu.grad.type': 'Undergraduate', 'edu.grad.title': 'Business Administration', 'edu.grad.org': 'UNESA · 2024',
+      'edu.cert1.type': 'Certification', 'edu.cert1.title': 'AI Data Engineer Training', 'edu.cert1.org': 'AIDE · 2026',
+      'edu.cert2.type': 'Certification', 'edu.cert2.title': 'Data Engineering with Azure', 'edu.cert2.org': 'Microsoft Azure',
+      'roles': ['Data Engineer', 'AI Data Engineer', 'Multi-Agent Systems']
+    }
+  };
 
-  const el = document.getElementById('typewriter-text');
-  let roleIndex = 0;
-  let charIndex = 0;
-  let deleting = false;
-  const TYPING_SPEED = 80;
-  const DELETING_SPEED = 40;
-  const PAUSE_AFTER_WORD = 1800;
-  const PAUSE_BEFORE_NEXT = 300;
+  let currentLang = localStorage.getItem('portfolio-lang') || 'pt';
+
+  function setLanguage(lang) {
+    currentLang = lang;
+    const t = translations[lang];
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (t[key] !== undefined) el.textContent = t[key];
+    });
+
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (t[key] !== undefined) el.innerHTML = t[key];
+    });
+
+    document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+    localStorage.setItem('portfolio-lang', lang);
+
+    resetTypewriter();
+  }
+
+  // Typewriter
+  const twEl = document.getElementById('typewriter-text');
+  let roleIdx = 0, charIdx = 0, deleting = false, twTimer;
+  const TYPING = 80, DELETING = 40, PAUSE_END = 1800, PAUSE_START = 300;
 
   function type() {
-    const current = roles[roleIndex];
+    const roles = translations[currentLang].roles;
+    const current = roles[roleIdx % roles.length];
 
     if (!deleting) {
-      el.textContent = current.slice(0, charIndex + 1);
-      charIndex++;
-      if (charIndex === current.length) {
+      twEl.textContent = current.slice(0, charIdx + 1);
+      charIdx++;
+      if (charIdx === current.length) {
         deleting = true;
-        setTimeout(type, PAUSE_AFTER_WORD);
+        twTimer = setTimeout(type, PAUSE_END);
         return;
       }
-      setTimeout(type, TYPING_SPEED);
+      twTimer = setTimeout(type, TYPING);
     } else {
-      el.textContent = current.slice(0, charIndex - 1);
-      charIndex--;
-      if (charIndex === 0) {
+      twEl.textContent = current.slice(0, charIdx - 1);
+      charIdx--;
+      if (charIdx === 0) {
         deleting = false;
-        roleIndex = (roleIndex + 1) % roles.length;
-        setTimeout(type, PAUSE_BEFORE_NEXT);
+        roleIdx = (roleIdx + 1) % roles.length;
+        twTimer = setTimeout(type, PAUSE_START);
         return;
       }
-      setTimeout(type, DELETING_SPEED);
+      twTimer = setTimeout(type, DELETING);
     }
   }
 
-  type();
+  function resetTypewriter() {
+    clearTimeout(twTimer);
+    twEl.textContent = '';
+    roleIdx = 0; charIdx = 0; deleting = false;
+    type();
+  }
+
+  setLanguage(currentLang);
 </script>
 
 </body>
