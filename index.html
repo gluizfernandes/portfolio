@@ -12,8 +12,8 @@
       --bg: #0d0f1a;
       --surface: #161929;
       --surface2: #1e2236;
-      --accent: #6366f1;
-      --accent2: #818cf8;
+      --accent: #ea580c;
+      --accent2: #f97316;
       --text: #e2e8f0;
       --text-muted: #8892a4;
       --border: #252840;
@@ -88,70 +88,45 @@
     }
 
     /* HERO */
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(99, 102, 241, 0.1);
-      border: 1px solid rgba(99, 102, 241, 0.25);
-      color: var(--accent2);
-      font-size: 12px;
-      font-weight: 500;
-      padding: 5px 14px;
-      border-radius: 20px;
-      margin-bottom: 28px;
-    }
-
-    .hero-badge::before {
-      content: '';
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #4ade80;
-      display: inline-block;
-    }
-
     .hero h1 {
-      font-size: 52px;
+      font-size: 56px;
       font-weight: 700;
       line-height: 1.08;
-      margin-bottom: 8px;
-      letter-spacing: -1px;
+      margin-bottom: 16px;
+      letter-spacing: -1.5px;
+      text-align: center;
     }
 
-    .hero-title {
+    .hero-typewriter {
       font-size: 22px;
       font-weight: 500;
       color: var(--accent2);
-      margin-bottom: 20px;
+      margin-bottom: 24px;
       letter-spacing: -0.3px;
+      min-height: 32px;
+    }
+
+    .typewriter-cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1.1em;
+      background: var(--accent2);
+      margin-left: 3px;
+      vertical-align: text-bottom;
+      animation: blink 0.75s step-end infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
     }
 
     .hero-desc {
       font-size: 16px;
       color: var(--text-muted);
-      max-width: 540px;
-      margin-bottom: 36px;
-      line-height: 1.7;
-    }
-
-    .hero-metric {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--accent);
-      border-radius: 0 8px 8px 0;
-      padding: 12px 20px;
-      font-size: 13px;
-      color: var(--text-muted);
+      max-width: 560px;
       margin-bottom: 40px;
-    }
-
-    .hero-metric strong {
-      color: var(--text);
-      font-weight: 600;
+      line-height: 1.75;
     }
 
     .hero-cta {
@@ -171,7 +146,7 @@
     }
 
     .btn-primary:hover {
-      background: #4f46e5;
+      background: #c2410c;
       text-decoration: none;
       transform: translateY(-1px);
     }
@@ -209,7 +184,7 @@
     }
 
     .stack-card:hover {
-      border-color: rgba(99, 102, 241, 0.4);
+      border-color: rgba(234, 88, 12, 0.4);
     }
 
     .stack-card h3 {
@@ -254,7 +229,7 @@
     }
 
     .project-card:hover {
-      border-color: rgba(99, 102, 241, 0.5);
+      border-color: rgba(234, 88, 12, 0.5);
       transform: translateY(-2px);
     }
 
@@ -293,7 +268,7 @@
     }
 
     .project-result {
-      background: rgba(99, 102, 241, 0.07);
+      background: rgba(234, 88, 12, 0.07);
       border-left: 3px solid var(--accent);
       padding: 10px 14px;
       border-radius: 0 6px 6px 0;
@@ -318,9 +293,7 @@
 
     .exp-item:last-child { border-bottom: none; }
 
-    .exp-meta {
-      padding-top: 2px;
-    }
+    .exp-meta { padding-top: 2px; }
 
     .exp-period {
       font-size: 12px;
@@ -394,7 +367,7 @@
     }
 
     .edu-card:hover {
-      border-color: rgba(99, 102, 241, 0.4);
+      border-color: rgba(234, 88, 12, 0.4);
     }
 
     .edu-type {
@@ -458,8 +431,8 @@
     @media (max-width: 640px) {
       nav { padding: 14px 20px; }
       .nav-links { display: none; }
-      .hero h1 { font-size: 36px; }
-      .hero-title { font-size: 17px; }
+      .hero h1 { font-size: 38px; }
+      .hero-typewriter { font-size: 17px; }
       .exp-item { grid-template-columns: 1fr; gap: 6px; }
       .projects-grid { grid-template-columns: 1fr; }
       section { padding: 72px 20px; }
@@ -482,17 +455,16 @@
 
 <!-- HERO -->
 <section id="inicio">
-  <div class="hero-badge">Disponível para novas oportunidades</div>
-  <h1 class="hero" style="font-size:52px;font-weight:700;line-height:1.08;margin-bottom:8px;letter-spacing:-1px;">George<br>Fernandes</h1>
-  <div class="hero-title">AI Data Engineer · Multi-Agent Systems · RAG</div>
-  <p class="hero-desc">
-    Construo pipelines de dados e sistemas multi-agent que conectam inteligência artificial
-    ao problema de negócio. Cinco anos de experiência em Saúde, Logística e Varejo.
-  </p>
-  <div class="hero-metric">
-    <span>Automação com IA na HealthBit:</span>
-    <strong>entrega de relatórios de 2h para 20 min — redução de 6x</strong>
+  <h1 class="hero">George<br>Fernandes</h1>
+  <div class="hero-typewriter">
+    <span id="typewriter-text"></span><span class="typewriter-cursor"></span>
   </div>
+  <p class="hero-desc">
+    Atuo na interseção entre engenharia de dados e inteligência artificial, construindo
+    pipelines e sistemas multi-agent que transformam dados em decisões. Mais de 5 anos
+    de experiência em setores de alta complexidade: Saúde Corporativa, Logística,
+    Oil & Gas e Varejo.
+  </p>
   <div class="hero-cta">
     <a href="https://linkedin.com/in/gluizfernandes" class="btn-primary" target="_blank">LinkedIn</a>
     <a href="https://github.com/gluizfernandes" class="btn-secondary" target="_blank">GitHub</a>
@@ -624,10 +596,10 @@
         <h3>HealthBit Performasys</h3>
         <div class="exp-role">Engenheiro de Dados</div>
         <ul class="exp-list-items">
-          <li><strong>Automação com IA:</strong> sistema de conversão de arquivos legados eliminando etapas manuais no pipeline de ingestão, reduzindo a entrega de relatórios críticos de 2h para 20 min (6x)</li>
           <li><strong>Pipelines ETL/ELT</strong> em Python e R para os 5 programas da plataforma (Gestante, Crônicos, Saúde Mental, Telemedicina, PAE), atendendo ~12 clientes líderes de mercado</li>
           <li><strong>Data products</strong> por programa com entrega padronizada em Power BI para diretoria e clientes, incluindo indicadores PHQ-9 e controle de slots de Telemedicina</li>
           <li><strong>AI-Driven Analytics:</strong> lógica orientada por dados conectando indicadores da camada de consumo a ações estratégicas dos clientes</li>
+          <li><strong>Data lineage e integridade:</strong> monitoramento de qualidade e distribuição horizontal de relatórios para diretoria e gestores executivos</li>
         </ul>
       </div>
     </div>
@@ -697,24 +669,62 @@
 <section id="contato">
   <div class="section-label">Contato</div>
   <div class="contact-grid">
-    <a href="https://linkedin.com/in/gluizfernandes" target="_blank" class="contact-link">
-      LinkedIn
-    </a>
-    <a href="https://github.com/gluizfernandes" target="_blank" class="contact-link">
-      GitHub
-    </a>
-    <a href="mailto:ggluizfernandes@gmail.com" class="contact-link">
-      ggluizfernandes@gmail.com
-    </a>
-    <a href="https://wa.me/5521970281734" target="_blank" class="contact-link">
-      WhatsApp
-    </a>
+    <a href="https://linkedin.com/in/gluizfernandes" target="_blank" class="contact-link">LinkedIn</a>
+    <a href="https://github.com/gluizfernandes" target="_blank" class="contact-link">GitHub</a>
+    <a href="mailto:ggluizfernandes@gmail.com" class="contact-link">ggluizfernandes@gmail.com</a>
+    <a href="https://wa.me/5521970281734" target="_blank" class="contact-link">WhatsApp</a>
   </div>
 </section>
 
 <footer>
   George Luiz Pereira Fernandes · Belford Roxo, RJ · 2026
 </footer>
+
+<script>
+  const roles = [
+    'AI Data Engineer',
+    'Multi-Agent Systems',
+    'RAG Pipelines',
+    'Data & AI Engineering',
+    'LangChain · CrewAI · LlamaIndex'
+  ];
+
+  const el = document.getElementById('typewriter-text');
+  let roleIndex = 0;
+  let charIndex = 0;
+  let deleting = false;
+  const TYPING_SPEED = 80;
+  const DELETING_SPEED = 40;
+  const PAUSE_AFTER_WORD = 1800;
+  const PAUSE_BEFORE_NEXT = 300;
+
+  function type() {
+    const current = roles[roleIndex];
+
+    if (!deleting) {
+      el.textContent = current.slice(0, charIndex + 1);
+      charIndex++;
+      if (charIndex === current.length) {
+        deleting = true;
+        setTimeout(type, PAUSE_AFTER_WORD);
+        return;
+      }
+      setTimeout(type, TYPING_SPEED);
+    } else {
+      el.textContent = current.slice(0, charIndex - 1);
+      charIndex--;
+      if (charIndex === 0) {
+        deleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        setTimeout(type, PAUSE_BEFORE_NEXT);
+        return;
+      }
+      setTimeout(type, DELETING_SPEED);
+    }
+  }
+
+  type();
+</script>
 
 </body>
 </html>
