@@ -143,14 +143,14 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      color: var(--text);
+      background: transparent;
+      border: 1px solid var(--accent);
+      color: var(--accent2);
       padding: 10px 18px;
       border-radius: 8px;
       font-size: 13px;
       font-weight: 500;
-      transition: border-color 0.2s, transform 0.15s, background 0.2s;
+      transition: border-color 0.2s, color 0.2s, transform 0.15s;
     }
 
     .social-btn:hover {
@@ -168,7 +168,7 @@
     .social-btn.github:hover    { border-color: #e6edf3; color: #e6edf3; }
     .social-btn.medium:hover    { border-color: #fff;    color: #fff;    }
     .social-btn.whatsapp:hover  { border-color: #25d366; color: #25d366; }
-    .social-btn.email:hover     { border-color: var(--accent2); color: var(--accent2); }
+    .social-btn.email:hover     { border-color: #f97316; color: #f97316; }
 
     /* STACK */
     .stack-grid {
